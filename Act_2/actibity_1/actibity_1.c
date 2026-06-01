@@ -24,10 +24,17 @@ int main(void) {
     gpio_init(6);
     gpio_set_dir(6, GPIO_IN);
     gpio_set_dir(20, GPIO_OUT);
+    while (true){
     gpio_put(20, 1);
-    bool h = gpio_get(6);
-  while (20,true){
-    
+    bool h = 0 
+    h = gpio_get (6);
+    //gpio_put(6 , 1);
+    if (h==1){
+      gpio_put(6,1);
+    }
+    else if (h==0){
+      gpio_út(6,0)
+    }
 
 
     /* Prendo LED
